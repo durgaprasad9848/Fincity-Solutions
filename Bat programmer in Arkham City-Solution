@@ -1,0 +1,12 @@
+//Here we consider the last person and his count.b/c in the middle of covering last person batman can cover the remainng persons.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,start;
+    cout<<"Enter no of patients and Starting posion of first patient";
+    cin>>n>>start;
+    cout<<"Batman can complete in: "<<n*start<<" Steps";
+    return 0;
+    
+}
