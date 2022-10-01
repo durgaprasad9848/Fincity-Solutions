@@ -1,4 +1,4 @@
-//Here i used Recurssion concept and used boolion data type to select the pirticular combinations.
+//Here Recurssion concept and boolion data type is used to select the pirticular combinations.
 // After finding combinations i added the elements by sum and checked with the desired sweetness value
 // If it is matched i printed it's locations of input array.
 
