@@ -1,0 +1,69 @@
+//Here i used Recurssion concept and used boolion data type to select the pirticular combinations.
+// After finding combinations i added the elements by sum and checked with the desired sweetness value
+// If it is matched i printed it's locations of input array.
+
+
+#include<bits/stdc++.h>
+ 
+using namespace std;
+ 
+void grootscombi(int arr[], int reqlen, int st, int curlen, bool find[], int l,int d) 
+{
+    
+	if(curlen > reqlen)
+	return;
+	else if (curlen == reqlen) 
+	{
+	    int sum=0;
+		for (int i = 0; i < l; i++) 
+		{
+			if (find[i] == true) 
+			{
+			    sum+=arr[i];
+			}
+		}
+		if(sum==d)
+		{
+		    for(int i=0;i<l;i++)
+		    {
+		        if(find[i]==true)
+		        {
+		            cout<<i<<" ";
+		        }
+		    }
+		    cout<<endl;
+		}
+		
+		return;
+	}
+	if (st == l) 
+	{
+		return;
+	}
+	find[st] = true;
+	grootscombi(arr, reqlen, st + 1, curlen + 1, find, l,d);
+	find[st] = false;
+	grootscombi(arr, reqlen, st + 1, curlen, find, l,d);
+}
+ 
+int main()
+{
+	int i, n,d;
+	bool find[n];
+	cout<<"Enter the number of pies groot have: ";
+	cin>>n;
+	int arr[n];
+	cout<<"Enter Sweetnes values: ";
+	for(i = 0; i < n; i++)
+	{
+		cin>>arr[i];
+		find[i] = false;
+	}
+    cout<<"Enter desired sweetnes value: ";
+    cin>>d;
+	for(i = 1; i <= n; i++)
+	{
+		grootscombi(arr, i, 0, 0, find, n,d);
+	}
+	return 0;
+}
