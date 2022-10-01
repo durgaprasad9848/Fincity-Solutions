@@ -1,4 +1,5 @@
-//Here we consider the last person and his count.b/c in the middle of covering last person batman can cover the remainng persons.
+//Here we consider the last person and his count, because in the middle of covering last person batman can cover the remainng persons.
+
 #include<bits/stdc++.h>
 using namespace std;
 int main()
