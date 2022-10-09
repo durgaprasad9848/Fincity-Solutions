@@ -1,4 +1,4 @@
-//Here we consider the last person and his count, because in the middle of covering last person batman can cover the remainng persons.
+//Here we consider the last person and his count, because batman covers all the presons before reaching the last person.
 
 #include<bits/stdc++.h>
 using namespace std;
